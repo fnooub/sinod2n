@@ -18,7 +18,7 @@ var myWidget = cloudinary.createUploadWidget({
     if (!error && result && result.event === "success") { 
       console.log('Done! Here is the image info: ', result.info.url); 
       document.getElementById("myInput").value = result.info.url;
-      document.getElementById("myAnchor").href = 'scan.php?link=' + result.info.url;
+      document.getElementById("myAnchor").href = 'vietphrase.php?link='+location.href+'scan.php?link=' + result.info.url;
     }
   }
 )
