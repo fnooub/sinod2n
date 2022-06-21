@@ -4,7 +4,7 @@ include 'functions.php';
 
 $link = $_GET['link'];
 
-$show = 50000;
+$show = 10000;
 $tx = single_curl($link);
 $strrpos = mb_strrpos($tx, " ");
 $total = 1;
@@ -54,5 +54,5 @@ if (isset($_GET['nd'])) {
 }
 
 for ($i=1; $i <= $total; $i++) { ?>
-	<p><a href="<?php echo $link ?>&nd&p=<?php echo $i ?>">TXT PHAN <?php echo $i; ?></a></p>
+	<p><a href="<?php echo base_url. 'scan.php?link=' . $link ?>&nd&p=<?php echo $i ?>">TXT PHAN <?php echo $i; ?></a></p>
 <?php } ?>
