@@ -53,6 +53,6 @@ if (isset($_GET['nd'])) {
 	echo $nd;
 }
 
-for ($i=1; $i <= $total; $i++) { ?>
-	<p><a href="<?php echo base_url. 'scan.php?link=' . $link ?>&nd&p=<?php echo $i ?>">TXT PHAN <?php echo $i; ?></a></p>
-<?php } ?>
+for ($i=0; $i <= $total; $i++) { 
+	echo '<p><a href="'.base_url().'scan.php?link=' . $link . '&nd&p='.$i.'">TXT PHAN '.$i.'</a></p>';
+}
