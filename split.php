@@ -11,9 +11,10 @@ $total = 1;
 if (isset($_GET['p'])) {
 	$page = abs(intval($_GET['p']));
 	if ($page == 0) $page = 1;
+	$start = $page - 1;
 }
 else {
-	$page = 1;
+	$page = $start + 1;
 }
 $ta = 0;
 if ($strrpos) {
@@ -47,12 +48,12 @@ else {
 	$nd = $tx;
 }
 
-
+echo $total;
 if (isset($_GET['nd'])) {
 	header("Content-Type: text/plain");
 	echo $nd;
 }
 
-for ($i=0; $i <= $total; $i++) { 
+for ($i=1; $i <= $total; $i++) { 
 	echo '<p><a href="'.base_url().'scan.php?link=' . $link . '&nd&p='.$i.'">TXT PHAN '.$i.'</a></p>';
 }
