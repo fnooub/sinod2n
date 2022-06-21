@@ -8,6 +8,7 @@
 <button onclick="myFunction()">Copy text</button>
 
 <p><a id="myAnchor" href="">SCAN NGAY</a></p>
+<p><a id="mySplit" href="">SPLIT NGAY</a></p>
 
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
 
@@ -19,6 +20,7 @@ var myWidget = cloudinary.createUploadWidget({
       console.log('Done! Here is the image info: ', result.info.url); 
       document.getElementById("myInput").value = result.info.url;
       document.getElementById("myAnchor").href = 'vietphrase.php?link='+location.href+'scan.php?link=' + result.info.url;
+      document.getElementById("mySplit").href = 'split.php?link='+location.href+'scan.php?link=' + result.info.url;
     }
   }
 )
