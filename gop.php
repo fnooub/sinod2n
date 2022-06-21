@@ -4,13 +4,14 @@
 
 if (isset($_POST['text'])) {
 	$urls = explode("\n", $_POST['text']);
+	$newfile = time() . '.txt';
 	foreach ($urls as $key => $value) {
-		$myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
+		$myfile = fopen($newfile, "a") or die("Unable to open file!");
 		$txt = file_get_contents($value);
 		fwrite($myfile, $txt);
 		fclose($myfile);
 	}
-
+	header('Location: ' . $newfile);
 }
 
 ?>
