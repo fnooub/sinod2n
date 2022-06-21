@@ -61,5 +61,5 @@ echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
 echo $total;
 
 for ($i=1; $i <= $total; $i++) { 
-	echo '<p><a href="?nd&p='.$i.'">TXT PHAN '.$i.'</a></p>';
+	echo '<p><a href="?link='.$link.'&nd&p='.$i.'">TXT PHAN '.$i.'</a></p>';
 }
